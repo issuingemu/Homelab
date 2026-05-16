@@ -33,7 +33,7 @@ Damit ich immer und von überall aus auf Dienste zugreifen kann, die ich in mein
 Das heißt allerdings nicht, dass ich mich nicht auch selbst mit Maßnahmen beschäftige, um meine Privatsphäre zu schützen und meine Cybersicherheit zu stärken. Beispielsweise ist der Traffic spezifischer Container-Stacks mittels VPN-Integration via Gluetun<sup>10</sup> anonymisiert und durch eine Killswitch-Logik in Docker-Compose zusätzlich abgesichert. Vor bösartigen Websites, und damit indirekt vor Malware und Phishing, schütze ich mein Netzwerk durch Pi-Hole<sup>11</sup>, zur Wahrung der Privatsphäre gegenüber dem ISP nutze ich Unbound<sup>12</sup> DNS-over-TLS via Quad9 DNS-Provider.
 
 Meine Netzwerkarchitektur habe ich in diesem Diagramm noch einmal übersichtlich visualisiert:
-![Netzwerksetup](assets/Serversetup.svg)
+![Netzwerksetup](assets/netzwerkarchitektur.svg)
 
 #### Wartung
 Wöchentliche System-Reboots meines Servers, verschlüsselte Cloud-Backups und Updates sind via Cronjobs automatisiert. Wenn unweigerlich mal etwas kaputt geht, mache ich mich selbst auf Fehlersuche und kümmere mich ums Troubleshooting.
