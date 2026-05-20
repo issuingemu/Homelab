@@ -1,15 +1,26 @@
 # 🏠 Homelab & Infrastructure
 
-Seit Mitte 2025 arbeite ich aktiv daran, meine Abhängigkeit von großen Cloud-Anbietern schrittweise abzubauen. Zu diesem Zweck habe ich einen eigenen Homeserver aufgesetzt, auf dem ich Open-Source Alternativen selbst hoste und die zur Verfügung stehenden Ressourcen so effizient wie ich kann verteile.
-
----
-### Selbst konfigurierter und zusammengebauter PC
 Schon seit meiner Kindheit faszinieren mich moderne Technologien. Da mir in meiner Jugend jedoch die Mittel für eigene Hardware fehlten, konnte ich mein technisches Interesse zunächst nicht tiefer in der Praxis verwurzeln – meine Begeisterung für die IT lebte ich daher über viele Jahre primär über die Welt der Videospiele aus. 
 
-Im Jahr 2023 konnte ich mir schließlich den langjährigen Traum erfüllen, einen eigenen Gaming-PC von Grund auf selbst zu planen und zusammenzubauen.
+Im Jahr 2023 konnte ich mir schließlich den langjährigen Traum erfüllen, einen eigenen Gaming-PC von Grund auf selbst zu planen und zusammenzubauen. Mit diesem Meilenstein wurde das Wiederentdecken meiner Leidenschaft für die IT eingeleitet. Seitdem habe ich mich ununterbrochen technisch weiterentwickelt, mir tieferes Wissen angeeignet und meine praktischen Fähigkeiten kontinuierlich ausgeweitet.
+
+Seit Mitte 2025 arbeite ich aktiv daran, meine Abhängigkeit von großen Cloud-Anbietern schrittweise abzubauen. Zu diesem Zweck habe ich einen eigenen Homeserver aufgesetzt, auf dem ich quelloffene (Open-Source) Alternativen selbst hoste und die zur Verfügung stehenden Ressourcen so effizient wie ich kann verteile.
+
+---
+
+## 💻 Hardware
+
+### Workstation
+
+Der 2023 fertiggestellte Gaming-PC markiert den Startpunkt meines technischen Werdegangs.
 
 ![PC-Konfiguration](assets/pc_config.svg)
 
+### Raspberry Pi 5
+Wenig später suchte ich nach einer Möglichkeit, Spiele von meinem PC auf den Fernseher zu streamen, um dort mit Konsolenfeeling zu spielen. Ich habe mich informiert und mein erstes Networking-Projekt gestartet...
+
+### Raspberry Pi 5
+Wenig später suchte ich nach einer Möglichkeit, Spiele von meinem PC...
 Mit diesem Meilenstein wurde das Wiederentdecken meiner Leidenschaft für die IT eingeleitet. Seitdem habe ich mich ununterbrochen technisch weiterentwickelt, mir tieferes Wissen angeeignet und meine praktischen Fähigkeiten kontinuierlich ausgeweitet.
 
 ![PC-Konfiguration](assets/pc_config.svg)
