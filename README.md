@@ -46,19 +46,19 @@ Um jederzeit und von überall aus sicher auf die Dienste in meinem Heimnetzwerk 
 
 Im Vergleich zu klassischen Portweiterleitungen vermeide ich dadurch offene Ports, die potenzielle Angriffsvektoren in der Firewall darstellen würden. Gleichzeitig erlaubt mir dieser Ansatz, sämtliche Authentifizierungsprozesse zentralisiert über ein übersichtliches Dashboard zu steuern, ohne die Souveränität über meine Daten aufzugeben. 
 
-Kritische Administrationsoberflächen (wie die Proxmox-Web-GUI oder das Dashboard meines Routers) sichere ich über das integrierte Identity & Access Management ab. Dies bietet mir Enterprise-Level-Sicherheitsstandards und eine zuverlässige Zwei-Faktor-Authentifizierung, ohne dass ich fehleranfällige, eigene Reverse-Proxy-Masken von Grund auf selbst implementieren muss.
+Kritische Administrationsoberflächen (wie die Proxmox-Web-GUI oder das Dashboard meines Routers) sichere ich über das integrierte Identity & Access Management (IAM) ab. Dies bietet mir Enterprise-Level-Sicherheitsstandards und eine zuverlässige Zwei-Faktor-Authentifizierung (2FA), ohne dass ich fehleranfällige, eigene Reverse-Proxy-Masken von Grund auf selbst implementieren muss.
 
 #### 🔒 Datenschutz & Cybersicherheit im LAN
 Auch intern setze ich gezielte Maßnahmen um, um meine Privatsphäre zu schützen und das Netzwerk zu härten:
 * **Anonymisierung:** Der Netzwerktraffic spezifischer Container-Stacks wird über eine VPN-Integration via **Gluetun**¹⁰ geleitet. Eine strikte Killswitch-Logik innerhalb von Docker Compose verhindert Datenlecks bei Verbindungsabbrüchen.
 * **DNS-Filterung:** Ein zentraler **Pi-hole**¹¹ schützt alle Endgeräte im Netzwerk vor bösartigen Domains, Tracking und Phishing-Versuchen.
-* **DNS-Privatsphäre:** Zur Wahrung der Privatsphäre gegenüber dem ISP filtert ein eigener **Unbound**¹²-DNS-Server die Anfragen und leitet sie verschlüsselt via *DNS-over-TLS* an den zensurfreien Provider *Quad9*¹³ weiter.
+* **DNS-Privatsphäre:** Zur Wahrung der Privatsphäre gegenüber dem ISP filtert ein eigener **Unbound**¹²-DNS-Server die Anfragen und leitet sie verschlüsselt via *DNS-over-TLS (DoT)* an den zensurfreien Provider *Quad9*¹³ weiter.
 
 Meine vollständige Netzwerkarchitektur habe ich in diesem Diagramm visualisiert:
 ![Netzwerksetup](assets/netzwerkarchitektur.svg)
 
 #### 🔄 Wartung & Ausfallsicherheit
-Wöchentliche System-Reboots des Servers, verschlüsselte Cloud-Backups der Konfigurationen sowie System-Updates sind über automatisierte **Cronjobs** geregelt. Sollten im Betrieb Fehler auftreten, übernehme ich das Protokoll-Auslesen (Log-Analyse) und das Troubleshooting eigenständig.
+Wöchentliche System-Reboots des Servers, verschlüsselte Cloud-Backups der Konfigurationen sowie System-Updates sind über automatisierte **Cronjobs** geregelt. Sollten im Betrieb Fehler auftreten, nutze ich KI-Sprachmodelle bei der Log-Analyse und übernehme das Troubleshooting eigenständig.
 
 ---
 
