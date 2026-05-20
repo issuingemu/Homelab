@@ -1,47 +1,70 @@
-# Homelab & Infrastructure
-Seit Mitte 2025 arbeite ich aktiv daran, meine Abhängigkeit von großen Cloudanbietern abzubauen und habe zu diesem Zweck einen Homeserver aufgesetzt. Dort hoste ich quelloffene Alternativen selbst und verteile die zur Verfügung stehenden Ressourcen so effizient, wie ich kann.
+# 🏠 Homelab & Infrastructure
+
+Seit Mitte 2025 arbeite ich aktiv daran, meine Abhängigkeit von großen Cloud-Anbietern schrittweise abzubauen. Zu diesem Zweck habe ich einen eigenen Homeserver aufgesetzt, auf dem ich Open-Source Alternativen selbst hoste und die zur Verfügung stehenden Ressourcen so effizient wie ich kann verteile.
 
 ---
-
-## Hardware
 ### Selbst konfigurierter und zusammengebauter PC
-2023 habe ich mir den langjährigen Traum erfüllt, mir einen Gaming-PC zu bauen.
+Schon seit meiner Kindheit faszinieren mich moderne Technologien. Da mir in meiner Jugend jedoch die Mittel für eigene Hardware fehlten, konnte ich mein technisches Interesse zunächst nicht tiefer in der Praxis verwurzeln – meine Begeisterung für die IT lebte ich daher über viele Jahre primär über die Welt der Videospiele aus. 
+
+Im Jahr 2023 konnte ich mir schließlich den langjährigen Traum erfüllen, einen eigenen Gaming-PC von Grund auf selbst zu planen und zusammenzubauen.
 
 ![PC-Konfiguration](assets/pc_config.svg)
 
-Von diesem Punkt ist das Wiederentdecken meiner Leidenschaft für die IT gestartet. Seitdem habe ich mich ununterbrochen technisch weiterentwickelt und meine Fähigkeiten und Kenntnisse ausgeweitet.
+Mit diesem Meilenstein wurde das Wiederentdecken meiner Leidenschaft für die IT eingeleitet. Seitdem habe ich mich ununterbrochen technisch weiterentwickelt, mir tieferes Wissen angeeignet und meine praktischen Fähigkeiten kontinuierlich ausgeweitet.
+
+![PC-Konfiguration](assets/pc_config.svg)
+
+Mit diesem Meilenstein wurde das Wiederentdecken meiner Leidenschaft für die IT eingeleitet. Seitdem habe ich mich ununterbrochen technisch weiterentwickelt, mir tieferes Wissen angeeignet und meine praktischen Fähigkeiten kontinuierlich ausgeweitet.
 
 ### Raspberry Pi 5
-Nicht viel später habe ich nach einer Option gesucht, Spiele von meinem PC auf den Fernseher zu streamen, um dort mit Konsolenfeeling zu spielen. Ich habe mich informiert und mein erstes Networking-Projekt gestartet, indem ich einen Raspberry Pi als Client für das Open-Source Tool "Moonlight¹" eingerichtet habe und meinen Desktop vom PC aus mit Sunshine² ins Netzwerk streame. Nachdem das funktioniert hat, war ich angefixt und bin im nächsten Jahr weitere Selfhosting-Projekte mit meinem PC als Host angegangen.
+Wenig später suchte ich nach einer Möglichkeit, Spiele von meinem PC auf den Fernseher zu streamen, um dort mit echtem Konsolenfeeling zu spielen. Nach entsprechender Recherche startete ich mein erstes echtes Networking-Projekt: Ich richtete einen Raspberry Pi 5 als Client für das Open-Source-Tool **Moonlight**¹ ein, während mein Desktop-PC das Signal mittels **Sunshine**² in das lokale Netzwerk streamt. Nachdem dieses Setup fehlerfrei lief, war meine Begeisterung endgültig geweckt und ich setzte im darauffolgenden Jahr weitere Selfhosting-Projekte um.
 
-### Dell Wyse 5070
-2025 habe ich dann die nächste Eskalationsstufe meines neuen Hobbies erreicht und mich nach dedizierter Hardware für den Einsatz als Home-Server umgeschaut, da ich nach einem Umzug Smart-Home Geräte installieren wollte und dafür ein System gebraucht habe, das 24/7 in Betrieb bleiben kann. Zunächst dachte ich an einen weiteren Raspberry Pi, habe mich aber schließlich für einen wiederaufgearbeiteten Mini-PC entschieden, mit dem ich auch zukünftige Projekte umsetzen kann.
-Diesen habe ich mit einer NVMe SSD und mehr Arbeitsspeicher aufgerüstet und als Server aufgesetzt.
+### Dell Wyse 5070 (Homeserver)
+Im Jahr 2025 folgte die nächste Stufe meines neuen Hobbys: Ich habe mich nach dedizierter Hardware für den dauerhaften Einsatz als Homeserver umgesehen. Auslöser war ein Umzug, im Zuge dessen ich Smart-Home-Geräte installieren wollte, was ein ausfallsicheres System voraussetzt, das 24/7 in Betrieb bleiben kann. 
+
+Anstelle eines weiteren Einplatinencomputers entschied ich mich für einen wiederaufbereiteten x86-Mini-PC, um genügend Leistungsreserven für zukünftige Projekte zu haben. Diesen habe ich eigenständig mit einer NVMe-SSD sowie zusätzlichem Arbeitsspeicher aufgerüstet und als Server aufgesetzt.
 
 ---
-## Software
+
+## 🛠️ Software & Infrastruktur
+
 ### Betriebssysteme & Hypervisor
+
 #### Desktop
-Seit 2025 nutze ich Linux auf meinem Desktop. Aufgrund von Privacy-Bedenken, deplazierter Werbung und dem Wunsch, neue nützliche Fähigkeiten zu sammeln und mir Wissen anzueignen, habe ich mich entschieden, Windows zu verlassen. Die erste Distribution, die ich ausprobiert habe, war **Pop!_OS**³. Hier habe ich einige Monate mit gearbeitet, bis ich tiefer eintauchen wollte. Etwa seit Februar 2026 nutze ich **Arch Linux**⁴ und **Hyprland**⁵ als Desktop-Environment.
+Seit 2025 nutze ich Linux als primäres Betriebssystem auf meinem Desktop. Ausschlaggebend für den Wechsel weg von Windows waren zunehmende Datenschutzbedenken (Privacy), deplatzierte Werbung im Betriebssystem sowie der gezielte Wunsch, neue technische Fähigkeiten aufzubauen. 
+
+Meine Reise begann mit **Pop!_OS**³, womit ich einige Monate produktiv gearbeitet habe. Um noch tiefer in die Materie einzutauchen, gewöhne ich mir seit Februar 2026 die Nutzung von **Arch Linux**⁴ in Kombination mit **Hyprland**⁵ als Kachel-Fenstermanager (Tiling Window Manager) an.
 
 #### Homeserver
-Meinen Server betreibe ich mit **Proxmox VE**⁶ als Virtualisierungsengine. Die Tools die ich dort hoste betreibe ich in isolierten Linuxcontainern, die ich mithilfe der Helper-Scripts aufsetze, die tteck zur Verfügung stellt⁷. Für modulare Dienste arbeite ich zusätzlich mit Docker⁸.
-
-### Netzwerk & Zugriff
-Damit ich immer und von überall aus auf Dienste zugreifen kann, die ich in meinem Netzwerk hoste, habe ich eine Domain bei Cloudflare registriert und einen Zero-Trust⁹ Tunnel in meinem LAN konfiguriert. Im Vergleich zu Proxys kann ich so offene Ports vermeiden, die Löcher in meine Firewall bohren und Sicherheitslücken schaffen. Gleichzeitig kann ich damit alle Prozesse outsourcen, die mit dem Zugriff auf mein LAN und dort gehostete Dienste zu tun haben und in einem übersichtlichen und verständlichen Dashboard zentralisieren, ohne die Kontrolle darüber abgeben zu müssen. Dadurch arbeite ich effizienter an meinen Projekten und profitiere von Enterprise-Level Security Standards. Kritische Oberflächen, wie das Proxmox-Environment selbst oder das Web-GUI meines Routers, kann ich so mit dem integrierten Identity & Access Management System vor Fremdzugriff schützen, ohne erst selbst lernen zu müssen, wie ich meinen Proxy mit einer zuverlässig funktionierenden und vor Angriffen geschützten 2FA-Maske absichere.
-
-Das heißt allerdings nicht, dass ich mich nicht auch selbst mit Maßnahmen beschäftige, um meine Privatsphäre zu schützen und meine Cybersicherheit zu stärken. Beispielsweise ist der Traffic spezifischer Container-Stacks mittels VPN-Integration via Gluetun<sup>10</sup> anonymisiert und durch eine Killswitch-Logik in Docker-Compose zusätzlich abgesichert. Vor bösartigen Websites, und damit indirekt vor Malware und Phishing, schütze ich mein Netzwerk durch Pi-Hole<sup>11</sup>, zur Wahrung der Privatsphäre gegenüber dem ISP nutze ich Unbound<sup>12</sup> DNS-over-TLS via Quad9 DNS-Provider.
-
-Meine Netzwerkarchitektur habe ich in diesem Diagramm noch einmal übersichtlich visualisiert:
-![Netzwerksetup](assets/netzwerkarchitektur.svg)
-
-#### Wartung
-Wöchentliche System-Reboots meines Servers, verschlüsselte Cloud-Backups und Updates sind via Cronjobs automatisiert. Wenn unweigerlich mal etwas kaputt geht, mache ich mich selbst auf Fehlersuche und kümmere mich ums Troubleshooting.
-
-
+Meinen Server betreibe ich auf Basis von **Proxmox VE**⁶ als Typ-1-Hypervisor (Virtualisierungs-Engine). Die verschiedenen Dienste laufen hochgradig isoliert in schlanken Linux-Containern (LXC), die ich unter anderem mithilfe der Proxmox-Helper-Scripts von tteck⁷ aufsetze. Für modulare oder kurzlebige Dienste arbeite ich zusätzlich mit **Docker**⁸.
 
 ---
-# Referenzen
+
+### 🌐 Netzwerk & Sicherer Zugriff
+
+Um jederzeit und von überall aus sicher auf die Dienste in meinem Heimnetzwerk zugreifen zu können, nutze ich eine eigene Domain bei Cloudflare in Kombination mit einem **Zero-Trust-Tunnel**⁹ innerhalb meines LANs.
+
+[Externer Client] ➔ [Cloudflare Zero-Trust] ➔ [Sicherer Tunnel (keine offenen Ports)] ➔ [LAN / Homeserver]
+
+Im Vergleich zu klassischen Portweiterleitungen vermeide ich dadurch offene Ports, die potenzielle Angriffsvektoren in der Firewall darstellen würden. Gleichzeitig erlaubt mir dieser Ansatz, sämtliche Authentifizierungsprozesse zentralisiert über ein übersichtliches Dashboard zu steuern, ohne die Souveränität über meine Daten aufzugeben. 
+
+Kritische Administrationsoberflächen (wie die Proxmox-Web-GUI oder das Dashboard meines Routers) sichere ich über das integrierte Identity & Access Management (IAM) ab. Dies bietet mir Enterprise-Level-Sicherheitsstandards und eine zuverlässige Zwei-Faktor-Authentifizierung (2FA), ohne dass ich fehleranfällige, eigene Reverse-Proxy-Masken von Grund auf selbst implementieren muss.
+
+#### 🔒 Datenschutz & Cybersicherheit im LAN
+Auch intern setze ich gezielte Maßnahmen um, um meine Privatsphäre zu schützen und das Netzwerk zu härten:
+* **Anonymisierung:** Der Netzwerktraffic spezifischer Container-Stacks wird über eine VPN-Integration via **Gluetun**¹⁰ geleitet. Eine strikte Killswitch-Logik innerhalb von Docker Compose verhindert Datenlecks bei Verbindungsabbrüchen.
+* **DNS-Filterung:** Ein zentraler **Pi-hole**¹¹ schützt alle Endgeräte im Netzwerk vor bösartigen Domains, Tracking und Phishing-Versuchen.
+* **DNS-Privatsphäre:** Zur Wahrung der Privatsphäre gegenüber dem Internetdienstanbieter (ISP) filtert ein eigener **Unbound**¹²-DNS-Server die Anfragen und leitet sie verschlüsselt via *DNS-over-TLS (DoT)* an den zensurfreien Provider *Quad9* weiter.
+
+Meine vollständige Netzwerkarchitektur habe ich in diesem Diagramm visualisiert:
+![Netzwerksetup](assets/netzwerkarchitektur.svg)
+
+#### 🔄 Wartung & Ausfallsicherheit
+Wöchentliche System-Reboots des Servers, verschlüsselte Cloud-Backups der Konfigurationen sowie System-Updates sind über automatisierte **Cronjobs** geregelt. Sollten im Betrieb Fehler auftreten, übernehme ich das Protokoll-Auslesen (Log-Analyse) und das Troubleshooting eigenständig.
+
+---
+
+# 📚 Referenzen
 
 | Referenz | Tool / Projekt | Link |
 | :--- | :--- | :--- |
@@ -55,5 +78,5 @@ Wöchentliche System-Reboots meines Servers, verschlüsselte Cloud-Backups und U
 | 8 | Docker | [Homepage](https://www.docker.com/) |
 | 9 | Cloudflare Zero-Trust | [Homepage](https://www.cloudflare.com/lp/dg/brand/zero-trust/) |
 | 10 | Gluetun | [Repository](https://github.com/qdm12/gluetun) |
-| 11 | Pi-Hole | [Homepage](https://pi-hole.net/) |
+| 11 | Pi-hole | [Homepage](https://pi-hole.net/) |
 | 12 | Unbound | [Homepage](https://nlnetlabs.nl/projects/unbound/about/) |
